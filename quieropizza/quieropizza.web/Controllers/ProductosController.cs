@@ -12,11 +12,25 @@ namespace quieropizza.web.Controllers
         // GET: Productos
         public ActionResult Index()
         {
-            var producto = new ProductoModel();
-            producto.Id = 101;
-            producto.descripcion = "pizza hawaina";
+            ProductoModel a = new ProductoModel();
+            a.Id = 101;
+            a.descripcion = "pizza hawaina";
 
-            return View(producto);
+            ProductoModel b = new ProductoModel();
+            b.Id = 102;
+            b.descripcion = "pizza tres quesos";
+
+            ProductoModel c = new ProductoModel();
+            c.Id = 103;
+            c.descripcion = "pizza artesanal";
+
+            List<ProductoModel> productos = new List<ProductoModel>();
+            productos.Add(a);
+            productos.Add(b);
+            productos.Add(c);
+
+
+            return View(productos);
         }
     }
 }
